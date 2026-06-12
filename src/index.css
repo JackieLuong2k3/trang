@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom scrollbars for a cute, bubbly look */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9F2;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD1DC;
+  border-radius: 9999px;
+  border: 3px solid #FFF9F2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF9AA2;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FFF9F2;
+  color: #5D4E4E;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #FFD1DC;
+  color: #5D4E4E;
+}
+
+/* Custom animation for soft floaty items */
+@keyframes cute-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.cute-float-slow {
+  animation: cute-float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.cute-float-fast {
+  animation: cute-float 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Custom font styles */
+.cute-bubbles {
+  text-shadow: 2px 2px 0px rgba(255, 182, 193, 0.4);
+}
