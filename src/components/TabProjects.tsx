@@ -17,7 +17,7 @@ interface TabProjectsProps {
   language: 'vi' | 'en';
 }
 
-type ProjectFilter = 'all' | 'game' | 'app' | 'toy' | 'design';
+type ProjectFilter = 'all' | 'trade' | 'collector' | 'service' | 'event' | 'guide';
 
 export default function TabProjects({ theme, language }: TabProjectsProps) {
   const [filter, setFilter] = useState<ProjectFilter>('all');
@@ -35,10 +35,11 @@ export default function TabProjects({ theme, language }: TabProjectsProps) {
 
   const getCategoryEmoji = (cat: string) => {
     switch (cat) {
-      case 'game': return '🎮';
-      case 'app': return '📱';
-      case 'toy': return '🧸';
-      case 'design': return '🎨';
+      case 'trade': return '💸';
+      case 'collector': return '💎';
+      case 'service': return '🛠️';
+      case 'event': return '🎉';
+      case 'guide': return '📚';
       default: return '✨';
     }
   };
@@ -49,23 +50,25 @@ export default function TabProjects({ theme, language }: TabProjectsProps) {
       <div className="flex flex-col gap-4">
         {/* Filters */}
         <div className="flex flex-wrap justify-center gap-2">
-          {(['all', 'game', 'app', 'toy', 'design'] as ProjectFilter[]).map((catName) => {
+          {(['all', 'trade', 'collector', 'service', 'event', 'guide'] as ProjectFilter[]).map((catName) => {
             const isActive = filter === catName;
             
             // Text values
             let label = catName.toUpperCase();
             if (language === 'vi') {
               if (catName === 'all') label = 'Tất cả ✨';
-              else if (catName === 'game') label = 'Trò chơi 🎮';
-              else if (catName === 'app') label = 'Ứng dụng 📱';
-              else if (catName === 'toy') label = 'Đồ chơi 🧸';
-              else if (catName === 'design') label = 'Thiết Kế 🎨';
+              else if (catName === 'trade') label = 'Trade Acc 💸';
+              else if (catName === 'collector') label = 'Sưu Tầm 💎';
+              else if (catName === 'service') label = 'Dịch Vụ 🛠️';
+              else if (catName === 'event') label = 'Sự Kiện 🎉';
+              else if (catName === 'guide') label = 'Hướng Dẫn 📚';
             } else {
               if (catName === 'all') label = 'All ✨';
-              else if (catName === 'game') label = 'Games 🎮';
-              else if (catName === 'app') label = 'Apps 📱';
-              else if (catName === 'toy') label = 'Toys 🧸';
-              else if (catName === 'design') label = 'Designs 🎨';
+              else if (catName === 'trade') label = 'Trades 💸';
+              else if (catName === 'collector') label = 'Collector 💎';
+              else if (catName === 'service') label = 'Services 🛠️';
+              else if (catName === 'event') label = 'Events 🎉';
+              else if (catName === 'guide') label = 'Guides 📚';
             }
 
             return (
@@ -200,8 +203,8 @@ export default function TabProjects({ theme, language }: TabProjectsProps) {
       {/* Bottom info banner */}
       <div className="text-center text-[11px] text-zinc-400 italic">
         {language === 'vi' 
-          ? '* Bấm "Xem thử 🌟" để kích hoạt vụ nổ trái tim mochi lấp lánh!' 
-          : '* Pressing "Launch Demo 🌟" releases a beautiful shower of sparkly mochi hearts!'}
+        ? '* Bấm "Xem thử 🌟" để nhận confetti mừng deal thành công — cùng Trang trade vui nha!'
+        : '* Click "Launch Demo 🌟" to celebrate a successful trade with a sparkle burst!'}
       </div>
     </div>
   );

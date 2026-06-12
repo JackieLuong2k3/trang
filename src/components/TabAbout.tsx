@@ -34,8 +34,8 @@ export default function TabAbout({ theme, language }: TabAboutProps) {
 
   const isPastel = theme === 'pastel';
 
-  const introTextEn = "Hello, I am a passionate developer who loves crafting whimsical interfaces! I believe coding isn't just about logic—it's about baking warmth, delight, and a little magic into every scroll and click. On sunny days, I craft beautiful web applications; on rainy days, I cuddle cats and drink sweet caramel boba.";
-  const introTextVi = "Chào cậu nha, tớ là một kỹ sư lập trình đam mê tạo ra các giao diện mộng mơ và tràn ngập niềm vui! Tớ tin rằng lập trình không chỉ là logic khô khan—đó là hành trình nhào nặn sự ấm áp, thú vị và phép thuật vào từng lượt cuộn trang hay bấm nút. Ngày nắng đẹp tớ code web xinh, ngày mưa tớ ôm mèo và uống trà sữa chân trâu hoàng kim.";
+  const introTextEn = "Hey there! I'm Trang Dep, a passionate Roblox account trader with 2+ years of experience. I specialize in OG usernames, limited-item accounts, and high-value trades. Every deal I make is safe, transparent, and scam-free. When I'm not flipping rare Roblox accounts, I'm scouting limited drops and helping the community avoid scammers!";
+  const introTextVi = "Chào bạn! Mình là Trang Dep — trader Roblox với hơn 2 năm kinh nghiệm. Mình chuyên các loại acc username OG, acc item limited giá trị cao và các deal đặc biệt. Mọi giao dịch đều an toàn, minh bạch và không scam. Lúc không trade, mình ră các server cộng đồng để giúp mọi người tránh scammer!";
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6" id="tab-about-container">
@@ -64,7 +64,7 @@ export default function TabAbout({ theme, language }: TabAboutProps) {
             animate={{ y: 0, opacity: 1 }}
             className={`text-2xl font-bold mb-1 ${isPastel ? 'text-pink-600' : 'text-black'}`}
           >
-            {language === 'vi' ? 'Mochi Dev' : 'Mochi Dev'}
+            {language === 'vi' ? 'Trang Dep' : 'Trang Dep'}
           </motion.h2>
           
           <p className="text-xs font-mono text-zinc-500 bg-zinc-100 px-3 py-1 rounded-full mb-4 inline-flex items-center gap-1">
@@ -95,54 +95,54 @@ export default function TabAbout({ theme, language }: TabAboutProps) {
         <CuteCard theme={theme} accentColor="from-indigo-300 to-sky-400" padding="p-5">
           <h3 className={`text-lg font-bold mb-3 flex items-center gap-2 ${isPastel ? 'text-indigo-600' : 'text-black'}`}>
             <Trophy className="text-amber-500 w-5 h-5" />
-            {language === 'vi' ? 'Chỉ số Sức Mạnh' : 'Cute Power Stats'}
+            {language === 'vi' ? 'Chỉ Số Trade Power 🎮' : 'Trade Power Stats 🎮'}
           </h3>
 
           <div className="space-y-4">
-            {/* Boba level */}
+            {/* Trade exp */}
             <div>
               <div className="flex justify-between text-xs font-bold mb-1">
-                <span className="flex items-center gap-1">🧋 {language === 'vi' ? 'Hàm lượng trà sữa (Boba factor)' : 'Boba Saturation'}</span>
-                <span>120% (Overload)</span>
+                <span className="flex items-center gap-1">🎮 {language === 'vi' ? 'Kinh nghiệm trade Roblox' : 'Roblox Trade Experience'}</span>
+                <span>98% (Legend)</span>
               </div>
               <div className="w-full bg-zinc-100 h-3 rounded-full overflow-hidden border border-zinc-200">
-                <motion.div 
+                <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: '100%' }}
+                  animate={{ width: '98%' }}
                   transition={{ duration: 1, delay: 0.2 }}
                   className="h-full bg-gradient-to-r from-amber-400 to-amber-500 rounded-full"
                 />
               </div>
             </div>
 
-            {/* Cat petting capability */}
+            {/* Safe rate */}
             <div>
               <div className="flex justify-between text-xs font-bold mb-1">
-                <span className="flex items-center gap-1">🐈 {language === 'vi' ? 'Trình độ dụ mèo hoang' : 'Stray Cat Magnetism'}</span>
-                <span>99% (Master)</span>
+                <span className="flex items-center gap-1">🛡️ {language === 'vi' ? 'Tỷ lệ giao dịch an toàn' : 'Safe Trade Rate'}</span>
+                <span>100% (Perfect)</span>
               </div>
               <div className="w-full bg-zinc-100 h-3 rounded-full overflow-hidden border border-zinc-200">
-                <motion.div 
+                <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: '99%' }}
+                  animate={{ width: '100%' }}
                   transition={{ duration: 1, delay: 0.3 }}
-                  className="h-full bg-gradient-to-r from-rose-400 to-pink-500 rounded-full"
+                  className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"
                 />
               </div>
             </div>
 
-            {/* Bugs fixed inside pixel */}
+            {/* Deals closed */}
             <div>
               <div className="flex justify-between text-xs font-bold mb-1">
-                <span className="flex items-center gap-1">👾 {language === 'vi' ? 'Khả năng diệt côn trùng (bug)' : 'Bugs Exterminated'}</span>
-                <span>85%</span>
+                <span className="flex items-center gap-1">💰 {language === 'vi' ? 'Số deal đã chốt thành công' : 'Deals Closed'}</span>
+                <span>85%+</span>
               </div>
               <div className="w-full bg-zinc-100 h-3 rounded-full overflow-hidden border border-zinc-200">
-                <motion.div 
+                <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: '85%' }}
                   transition={{ duration: 1, delay: 0.4 }}
-                  className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"
+                  className="h-full bg-gradient-to-r from-rose-400 to-pink-500 rounded-full"
                 />
               </div>
             </div>
@@ -153,20 +153,20 @@ export default function TabAbout({ theme, language }: TabAboutProps) {
         <CuteCard theme={theme} accentColor="from-yellow-200 to-orange-300" padding="p-5">
           <h3 className={`text-lg font-bold mb-2.5 flex items-center gap-2 ${isPastel ? 'text-amber-700' : 'text-black'}`}>
             <Smile className="text-amber-500 w-5 h-5 animate-bounce" />
-            {language === 'vi' ? 'Có thể cậu chưa biết?' : 'Fun Soft Facts'}
+            {language === 'vi' ? 'Có thể bạn chưa biết? 🎮' : 'Trader Fun Facts 🎮'}
           </h3>
           <ul className="text-xs text-zinc-600 space-y-2 leading-relaxed">
             <li className="flex items-start gap-2">
-              <span className="text-pink-400 mt-0.5">💖</span>
-              <span>{language === 'vi' ? 'Thích các góc bo tròn 2xl/3xl hơn mọi góc nhọn trên đời.' : 'Believes the world is a better place when widgets are styled with rounded-3xl.'}</span>
+              <span className="text-pink-400 mt-0.5">💎</span>
+              <span>{language === 'vi' ? 'Mình có thể định giá một tài khoản Roblox chỉ trong vòng 60 giây!' : 'Can appraise a Roblox account accurately within 60 seconds of seeing the inventory!'}</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-pink-400 mt-0.5">🐾</span>
-              <span>{language === 'vi' ? 'Code của tớ hoạt động nhờ chú mèo béo nằm đè lên chân sưởi ấm.' : 'All code is certified bug-free by a resident fat ginger kitten sleeping on the warm server.'}</span>
+              <span className="text-pink-400 mt-0.5">🛡️</span>
+              <span>{language === 'vi' ? 'Tỷ lệ chống scam 100% — mình biết hết các chiếu trò lừa đảo trong cộng đồng.' : 'Maintains a 100% anti-scam record — knows every trick scammers use in the Roblox community.'}</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-pink-400 mt-0.5">⭐️</span>
-              <span>{language === 'vi' ? 'Luôn thêm âm thanh "pop bubble" nhỏ mỗi khi làm bất kỳ nút bấm nào.' : 'Obsessed with designing cute custom audio feedback pop/bubbles for web layouts.'}</span>
+              <span>{language === 'vi' ? 'Đã viết guide chống scam được hơn 1000+ người đọc và chia sẻ trong cộng đồng.' : 'Authored an anti-scam guide read and shared by 1000+ traders across the Roblox community.'}</span>
             </li>
           </ul>
         </CuteCard>

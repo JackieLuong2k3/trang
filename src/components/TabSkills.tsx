@@ -23,12 +23,12 @@ export default function TabSkills({ theme, language }: TabSkillsProps) {
       {/* Introduction text */}
       <div className="text-center max-w-lg mx-auto mb-4">
         <h3 className={`text-xl font-bold mb-1.5 ${isPastel ? 'text-pink-600' : 'text-[#5D4E4E]'}`}>
-          {language === 'vi' ? 'Tiệm Bánh Kỹ Năng 🥯' : 'Skill Bakery 🥯'}
+          {language === 'vi' ? 'Kho Vũ Khí Trade 🎮' : 'Trader\'s Arsenal 🎮'}
         </h3>
         <p className="text-xs text-zinc-500 leading-relaxed">
           {language === 'vi' 
-            ? 'Những chiếc bánh ngọt công nghệ được nướng tỉ mỉ bằng tình yêu, bơ ngọt và các tiêu chuẩn gõ code cực cao!' 
-            : 'Tech delicacies carefully baked with sweet butter, lots of boba, and extremely rigorous coding standards.'}
+            ? 'Tất cả kỹ năng được rèn giũa qua hàng trăm deal thực tế, học từ cộng đồng và tự trang bị bằng kinh nghiệm xương máu!' 
+            : 'Every skill sharpened through hundreds of real trades, community lessons, and hard-earned experience!'}
         </p>
       </div>
 
@@ -99,14 +99,14 @@ export default function TabSkills({ theme, language }: TabSkillsProps) {
       {/* Cake-box design graphic (Decorative elements) */}
       <div className="bg-amber-50/50 rounded-2xl p-4 border border-dashed border-amber-200 flex flex-col md:flex-row gap-4 items-center justify-between text-xs text-amber-900 mt-2">
         <div className="flex items-center gap-2">
-          <span className="text-xl">🥨</span>
+          <span className="text-xl">🎮</span>
           <div>
-            <strong className="block">{language === 'vi' ? 'Tiêu chuẩn lò nướng Mochi' : 'Strict Baker Standards'}</strong>
-            <span className="text-amber-700/80">{language === 'vi' ? 'Code sạch thuần khiết, giao diện mượt như thạch dừa!' : 'Super clean responsive code, pixel-perfect layouts, safe state handling.'}</span>
+            <strong className="block">{language === 'vi' ? 'Cam kết của Trang Dep' : 'Trang Dep\'s Commitment'}</strong>
+            <span className="text-amber-700/80">{language === 'vi' ? 'Giao dịch sạch, minh bạch, tỷ lệ chống scam 100%!' : 'Clean trades, full transparency, 100% anti-scam track record!'}</span>
           </div>
         </div>
         <div className="text-[11px] font-mono text-amber-800 bg-amber-100/60 px-2 py-1 rounded">
-          {language === 'vi' ? '🔥 Nướng liên tục 24/7' : '🔥 Baked continuous 24/7'}
+          {language === 'vi' ? '🔥 Hoạt động 24/7' : '🔥 Active 24/7'}
         </div>
       </div>
     </div>
